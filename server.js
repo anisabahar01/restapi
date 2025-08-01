@@ -123,7 +123,7 @@ const server = http.createServer((req, res) => {
           scenario
         };
 
-        // check whether the request has succeeded or failed 
+        // check whether the request has succeeded or failed and sends a response accordingly, 200 if everything works and 400 if it doesn't
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(response));
       } catch (err) {
